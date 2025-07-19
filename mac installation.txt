@@ -1,0 +1,61 @@
+Install & transfer on macOS
+---------------------------
+mkdir ~/.node-red
+cd ~/.node-red
+
+npm init -y
+
+npm install node-red
+
+run: node node_modules/node-red/red.js --userDir ~/.node-red
+
+cd ~
+zip -r node-red-backup.zip .node-red
+
+-- copy zip file to new macOS
+
+unzip node-red-backup.zip
+cd ~/.node-red
+
+npm install (optional)
+
+-- removing a local installation
+close terminal running node-red, or type  pkill -f node-red
+
+rm -rf ~/.node-red
+
+clear cache:
+rm -rf ~/.npm
+rm -rf ~/.node-gyp
+rm -rf ~/.node_repl_history
+
+remove any aliases I created:
+nano ~/.zshrc
+
+-- creating a launch filenano ~/start-node-red.sh
+nano ~/start-node-red.sh
+
+type:
+#!/bin/bash
+node ~/.node-red/node_modules/node-red/red.js --userDir ~/.node-red
+
+-Press Control + O to save.
+-Press Enter to confirm the filename.
+-Press Control + X to exit.
+
+make it executable
+chmod +x ~/start-node-red.sh
+
+run it:
+~/node-red/start-node-red.sh
+or, from within the home dir, run ./start-node-red.sh
+
+--to copy (not symlink) the custom node files:
+npm install ../my-custom-node --install-links
+or
+cd ../my-custom-node
+npm pack
+cd ~/.node-red
+npm install ../my-custom-node/my-custom-node-1.0.0.tgz
+
+to toggle hidden files view in mac file browser ("Finder") use cmd+shift+. (period)
