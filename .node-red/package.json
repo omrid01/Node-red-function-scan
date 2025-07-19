@@ -1,0 +1,16 @@
+{
+  "name": "node-red-omri",
+  "version": "0.0.1",
+  "description": "Node-red installation with custom nodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omri Dayan",
+  "license": "ISC",
+  "dependencies": {
+    "@flowfuse/node-red-dashboard": "~1.25.0",
+    "node-red": "^4.0.9",
+    "omrid01_function-scan": "file:omri/node"
+  }
+}

@@ -1,0 +1,17 @@
+	{
+	"name": "omrid01_function-scan",
+	"version": "0.0.3",
+	"description": "Node for text scan and diff",
+    "dependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Omri Dayan",
+	"license": "ISC",
+	"keywords": ["Node-red"],
+	"node-red" : {
+		"nodes": {
+			"function_scan": "./function_scan.js"
+		}
+	}
+}
