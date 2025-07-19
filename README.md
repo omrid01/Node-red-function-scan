@@ -4,7 +4,7 @@ Custom Node-red adaptation with function-scan node
 ## Installation Guide (macOS)
 
 1. Install **Node.js** from https://nodejs.org/en/download.
-Take the latest LTS version for macOS (v22.17.1), accept all installation defaults (NodeJS in ~/usr/local/bin/node~, npm in ~/usr/local/bin/npm~).
+Take the latest LTS version for macOS (v22.17.1), accept all installation defaults (NodeJS in `/usr/local/bin/node`, npm in `/usr/local/bin/npm`).
 Once installed, verify by opening a terminal, typing **node --version** and **npm --version**, see you get valid responses.
 
 2. Download the directory-tree `.node-red` from this repository (`omrid01/Node-red-function-scan`), to your home directory (`~`).
